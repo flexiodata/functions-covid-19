@@ -1,0 +1,43 @@
+name: covid-19-cases-nyt
+deployed: true
+title: Covid-19 Cases (New York Times)
+description: Returns data about Covid-19 cases from the New York Times Covid-19 GitHub Repository
+params:
+  - name: properties
+    type: array
+    description: The properties to return, given as a string or array; defaults to all properties; see "Returns" for available properties
+    required: false
+  - name: filter
+    type: array
+    description: Search query to determine the rows to return, given as a string or array
+    required: false
+returns:
+  - name: state
+    type: string
+    description: The state name
+  - name: county
+    type: string
+    description: The county name
+  - name: cases
+    type: number
+    description: The number of cases in the state/county
+  - name: deaths
+    type: number
+    description: The number of deaths in the state/county
+  - name: date
+    type: string
+    description: The date of the information
+  - name: fips
+    type: integer
+    description: The fips number
+examples:
+  - '"date, state, county, cases, deaths"'
+  - '"", "\"New York\""'
+  - '"county, cases", "+Illinois +date:2020-04-01"'
+notes: |-
+  Data from The New York Times, based on reports from state and local health agencies
+  Additional Resources:
+  * New York Times Covid-19 GitHub Repo Source Data: \
+    https://github.com/nytimes/covid-19-data
+  * New York Times Covid-19 Tracking Page: \
+    https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html

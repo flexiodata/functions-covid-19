@@ -1,0 +1,59 @@
+name: covid-19-tests-owid
+deployed: true
+title: Covid-19 Tests (Our World In Data)
+description: Returns data about Covid-19 tests from the Our World In Data Covid-19 GitHub Repository
+params:
+  - name: properties
+    type: array
+    description: The properties to return, given as a string or array; defaults to all properties; see "Returns" for available properties
+    required: false
+  - name: filter
+    type: array
+    description: Search query to determine the rows to return, given as a string or array
+    required: false
+returns:
+  - name: entity
+    type: string
+    description: The country/entity performing the tests
+  - name: date
+    type: string
+    description: The date of the tests
+  - name: total_cumulative
+    type: string
+    description: The cumulative total number of tests performed
+  - name: total_cumulative_daily_change
+    type: integer
+    description: The daily change in cumulative total number of tests performed
+  - name: total_cumulative_per_thousand
+    type: number
+    description: Cumulative total per thousand
+  - name: total_cumulative_per_thousand_daily_change
+    type: number
+    description: The daily change in cumulative total per thousand
+  - name: three_day_rolling_mean_daily_change
+    type: number
+    description: The three-day rolling mean daily change
+  - name: three_day_rolling_mean_daily_change_per_thousand
+    type: number
+    description: The three-day rolling mean daily change per thousand
+  - name: source_url
+    type: string
+    description: The source url for the information
+  - name: source_label
+    type: string
+    description: The source label for the information
+  - name: notes
+    type: string
+    description: Notes for the information
+examples:
+  - '"entity,date,total_cumulative"'
+  - '"", "+CDC +\"United States\""'
+notes: |-
+  Data from Our World In Data, based on data collected by the Our World in Data team from official reports
+  Additional Resources:
+  * Our World In Data Covid-19 GitHub Repo Source Data: \
+    https://github.com/owid/covid-19-data/tree/master/public/data
+  * Our World In Data Covid-19 Tracking Page: \
+    https://ourworldindata.org/coronavirus
+  * Our World In Data Covid-19 Testing Sources: \
+    https://ourworldindata.org/covid-testing#source-information-country-by-country
