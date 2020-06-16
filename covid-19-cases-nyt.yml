@@ -3,8 +3,8 @@ deployed: true
 title: Covid-19 Cases (New York Times)
 description: Returns data about Covid-19 cases from the New York Times Covid-19 GitHub Repository
 task:
-  - op: redirect
-    path: https://www.flex.io/api/v2/integration-covid-19/pipes/covid-19-cases-nyt/run
+  op: redirect
+  path: https://www.flex.io/api/v2/integration-covid-19/pipes/covid-19-cases-nyt/run
 params:
   - name: properties
     type: array

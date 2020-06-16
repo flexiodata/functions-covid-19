@@ -3,8 +3,8 @@ deployed: true
 title: Covid-19 Tests (Our World In Data)
 description: Returns data about Covid-19 tests from the Our World In Data Covid-19 GitHub Repository
 task:
-  - op: redirect
-    path: https://www.flex.io/api/v2/integration-covid-19/pipes/covid-19-tests-owid/run
+  op: redirect
+  path: https://www.flex.io/api/v2/integration-covid-19/pipes/covid-19-tests-owid/run
 params:
   - name: properties
     type: array

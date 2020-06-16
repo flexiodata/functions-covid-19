@@ -3,8 +3,8 @@ deployed: true
 title: Covid-19 Cases (Johns Hopkins)
 description: Returns data about Covid-19 cases from the John Hopkins Covid-19 GitHub Repository
 task:
-  - op: redirect
-    path: https://www.flex.io/api/v2/integration-covid-19/pipes/covid-19-cases-jhu/run
+  op: redirect
+  path: https://www.flex.io/api/v2/integration-covid-19/pipes/covid-19-cases-jhu/run
 params:
   - name: properties
     type: array
