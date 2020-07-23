@@ -1,24 +1,20 @@
 # Covid-19 Data Google Sheets & Excel Spreadsheet Add-on
 
-A variety of data about Covid-19 is available on GitHub in CSV format. Three important sources include data from John's Hopkin's University, the New York Times, and Our World In Data:
-
-* Johns Hopkins Covid-19 GitHub Repo: https://github.com/CSSEGISandData/COVID-19
-* New York Times Covid-19 GitHub Repo: https://github.com/nytimes/covid-19-data
-* Our World In Data Covid-19 GitHub Repo: https://github.com/owid/covid-19-data
+A variety of data about Covid-19 is available on GitHub in CSV format. Three important sources include Github Repositories with data from [John's Hopkin's University](https://github.com/CSSEGISandData/COVID-19), the [New York Times](https://github.com/nytimes/covid-19-data), and [Our World In Data](https://github.com/owid/covid-19-data).
 
 The Flex.io Covid-19 spreadsheet functions allow data from these sources to be easily accessed in a spreadsheet as a function with search capabilities. Here are some examples:
 
-Return rows containing "Illinois" and "Cook" between 2020-04-01 and 2020-04-30 with all information from John's Hopkin's Covid-19 incident data:
+* Return rows containing "Illinois" and "Cook" between 2020-04-01 and 2020-04-30 with all information from John's Hopkin's Covid-19 incident data:
 ```
 =FLEX("covid-19-cases-jhu", "*", "+Illinois +Cook +date:[2020-04-01 TO 2020-04-30]")
 ```
 
-Return rows containing "Illinois" for "2020-04-01" with all information from New York Times Covid-19 incident data:
+* Return rows containing "Illinois" for "2020-04-01" with all information from New York Times Covid-19 incident data:
 ```
 =FLEX("covid-19-cases-nyt", "*", "+Illinois +date:2020-04-01")
 ```
 
-Return rows containing "CDC" and "United States" with all information from "Our World In Data" Covid-19 test data:
+* Return rows containing "CDC" and "United States" with all information from "Our World In Data" Covid-19 test data:
 ```
 =FLEX("covid-19-tests-owid", "*", "+CDC +\"United States\"")
 ```
